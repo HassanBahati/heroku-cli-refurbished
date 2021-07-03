@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = process.env.port || 5000;
 const path = require("path");
+require('dotenv').config()
 
 app.get("/", (req, res) => {
   res.send("this is the api root handler");
