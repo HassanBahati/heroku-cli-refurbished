@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = process.env.port || 5000;
 const path = require("path");
 require('dotenv').config()
 
@@ -18,4 +17,4 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(port, () => console.log(`Server started at port ${port}`));
+app.listen(process.env.PORT || 5000, () => console.log(`Server started at port ${port}`));
