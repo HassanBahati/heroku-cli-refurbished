@@ -3,9 +3,9 @@ const app = express();
 const path = require("path");
 require('dotenv').config()
 
-// app.get("/", (req, res) => {
-//   res.send("this is the api root handler");
-// });
+app.get("/api", (req, res) => {
+  res.send("this is the api root handler");
+});
 
 //serve static assets if in production
 if (process.env.NODE_ENV === "production") {
